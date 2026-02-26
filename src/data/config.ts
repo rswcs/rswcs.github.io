@@ -12,7 +12,7 @@ import type { DriverConfig, Race, Sponsor, CoachingPackage } from '../types'
 export const DRIVER: DriverConfig = {
   firstName:       'Nathan',           // REPLACE
   lastName:        'Wilkie',       // REPLACE
-  tagline:         'Your short punchy tagline goes here — one or two lines about the driver and their ambitions.',
+  tagline:         '',
   seriesAndSeason: 'HRKC · 2026',  // REPLACE e.g. 'Formula 4 · Season 2025'
 
   bio: [
