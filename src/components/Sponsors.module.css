@@ -1,0 +1,79 @@
+.section {
+  padding: var(--section-pad) 0;
+  background: var(--color-bg);
+}
+
+.intro {
+  max-width: 620px;
+  margin-bottom: 3.5rem;
+}
+
+.message {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(min(var(--sponsor-count), 4) 1fr);
+  gap: 1.5px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: var(--color-surface);
+  aspect-ratio: 2 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.card:hover {
+  background: rgba(232, 50, 42, 0.08);
+  transform: scale(1.04);
+  z-index: 1;
+}
+
+/* Real logo — grayscale default, colour on hover */
+.card img {
+  height: 80%;
+  width: 80%;
+  filter: grayscale(1) brightness(1.8);
+  transition: filter 0.3s;
+}
+
+.card:hover img {
+  filter: none;
+}
+
+/* Placeholder text shown before logos are added */
+.placeholder {
+  font-family: var(--font-condensed);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-border);
+}
+
+/* ── CTA row ── */
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.ctaText {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  max-width: 460px;
+  line-height: 1.65;
+}

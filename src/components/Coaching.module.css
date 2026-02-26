@@ -1,0 +1,130 @@
+.section {
+  padding: var(--section-pad) 0;
+  background: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 7rem);
+  align-items: start;
+}
+
+/* ── Photo ── */
+.image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-bg);
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
+}
+
+/* ── Text ── */
+.para {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.72;
+  margin-bottom: 1rem;
+}
+
+/* ── Package cards ── */
+.packages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+  background: var(--color-bg);
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.cardFeatured {
+  border-color: var(--color-accent);
+}
+
+.badge {
+  position: absolute;
+  top: -1px; right: 1.5rem;
+  background: var(--color-accent);
+  color: #fff;
+  font-family: var(--font-condensed);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.2em 0.75em;
+}
+
+.pkgName {
+  font-family: var(--font-condensed);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.pkgDesc {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.pkgPrice {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-text);
+  line-height: 1;
+  margin-bottom: 1.1rem;
+}
+
+.pkgPriceSuffix {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--color-muted);
+}
+
+/* ── ShopPay button ── */
+.btnWrap {
+  margin-top: 0.25rem;
+}
+
+.shopPayBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #5a31f4;
+  color: #fff;
+  font-family: var(--font-condensed);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.shopPayBtn:hover  { opacity: 0.88; }
+.shopPayBtn:active { transform: scale(0.97); }
+
+.shopPayLogo {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .image { aspect-ratio: 16 / 9; clip-path: none; }
+}
