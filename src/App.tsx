@@ -6,7 +6,7 @@ import Sponsors      from './components/Sponsors'
 import Coaching      from './components/Coaching'
 import ContactFooter from './components/ContactFooter'
 
-import { DRIVER, SCHEDULE as RACE_SCHEDULE, SPONSORS, COACHING_PACKAGES } from './data/config'
+import { DRIVER, SPONSORS, COACHING_PACKAGES } from './data/config'
 
 /**
  * OPTIONAL: If you have a backend schedule scraper, set this env variable
